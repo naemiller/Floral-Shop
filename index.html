@@ -48,280 +48,246 @@
             position: relative;
         }
 
+        @media (max-width: 968px) {
+            .editorial-hero {
+                grid-template-columns: 1fr;
+            }
+            .hero-image-wrapper {
+                min-height: 50vh;
+            }
+        }
+
         /* Text Side */
         .hero-statement {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 4rem 10% 4rem 12%;
+            padding: 6rem 10% 6rem 12%;
             background-color: var(--bg-canvas);
         }
 
-        .hero-statement .brand-tag {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
-            color: var(--muted-clay);
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .hero-statement h1 {
+        .hero-title {
             font-family: var(--font-editorial);
-            font-size: 4.5rem;
+            font-size: clamp(3rem, 6vw, 5rem);
             font-weight: 400;
-            line-height: 1.05;
-            letter-spacing: -0.02em;
+            line-height: 1.1;
             margin-bottom: 2rem;
         }
 
-        .hero-statement h1 em {
+        .hero-title em {
             font-style: italic;
-            color: var(--accent-rose);
+            font-weight: 400;
         }
 
-        .hero-statement p {
-            font-size: 1rem;
-            color: var(--muted-clay);
-            max-width: 420px;
-            margin-bottom: 3rem;
+        .hero-subtitle {
+            font-size: 1.1rem;
             font-weight: 300;
+            color: var(--muted-clay);
+            max-width: 500px;
+            margin-bottom: 3rem;
         }
 
-        /* High-Converting Floating Action Link */
-        .editorial-cta {
-            align-self: flex-start;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            text-decoration: none;
-            color: var(--ink);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            font-weight: 600;
-            transition: var(--transition-fluid);
-        }
-
-        .editorial-cta .circle-arrow {
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            border: 1px solid var(--ink);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            transition: var(--transition-fluid);
-        }
-
-        .editorial-cta:hover {
-            color: var(--accent-rose);
-        }
-
-        .editorial-cta:hover .circle-arrow {
-            background: var(--accent-rose);
-            border-color: var(--accent-rose);
-            color: var(--white);
-            transform: translateX(8px);
-        }
-
-        /* Main Image Side (Hero Visual Component) */
-        .hero-visual-frame {
+        /* Image Side */
+        .hero-image-wrapper {
             position: relative;
-            background-color: #e2ded5;
+            background-color: #e5e0d8;
             overflow: hidden;
         }
 
-        .hero-visual-frame img {
+        .hero-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: var(--transition-fluid);
         }
 
-        /* 2. THE ANTI-GRID EDITORIAL GALLERY (High Converting Sales Showcase) */
-        .showcase-container {
-            padding: 8rem 8% 10rem 8%;
-            max-width: 1500px;
-            margin: 0 auto;
+        /* 2. PREMIUM PRODUCT SECTION */
+        .product-section {
+            padding: 8rem 10%;
+            background-color: var(--white);
         }
 
-        .showcase-intro {
-            margin-bottom: 6rem;
-            max-width: 600px;
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
         }
 
-        .showcase-intro h2 {
+        .section-title {
             font-family: var(--font-editorial);
             font-size: 3rem;
             font-weight: 400;
-            line-height: 1.2;
             margin-bottom: 1rem;
         }
 
-        /* Asymmetrical stagger track */
-        .asymmetric-track {
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Editorial Product Card */
+        .product-card {
             display: flex;
             flex-direction: column;
-            gap: 12rem; /* Extreme spacing prevents it from looking like a standard list */
+            background: var(--bg-canvas);
+            padding: 1.5rem;
+            border-radius: 4px;
+            transition: var(--transition-fluid);
         }
 
-        /* Row Base Styling */
-        .editorial-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+        }
+
+        .product-image-container {
             width: 100%;
-        }
-
-        /* Flip alternating items to destroy template uniformity */
-        .editorial-row.alternate {
-            flex-direction: row-reverse;
-        }
-
-        /* Large Image Card Setup */
-        .art-card {
-            width: 55%;
-            position: relative;
-        }
-
-        .art-img-wrapper {
-            width: 100%;
-            height: 650px; /* Tall, premium proportions */
+            aspect-ratio: 4 / 5;
             overflow: hidden;
-            background-color: #eae6dd;
+            background-color: #e5e0d8;
+            margin-bottom: 1.5rem;
+            border-radius: 2px;
         }
 
-        .art-img-wrapper img {
+        .product-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition-fluid);
         }
 
-        .art-card:hover .art-img-wrapper img {
-            transform: scale(1.03);
+        .product-card:hover .product-img {
+            transform: scale(1.05);
         }
 
-        /* Floating Overlaid Product Panel for High Conversion Context */
-        .sales-panel {
-            width: 38%;
-            padding: 2rem 0;
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
         }
 
-        .editorial-row.alternate .sales-panel {
-            padding-right: 5%;
-        }
-
-        .sales-panel .item-index {
-            font-size: 0.8rem;
+        .product-name {
+            font-family: var(--font-editorial);
+            font-size: 1.6rem;
             font-weight: 600;
-            color: var(--accent-rose);
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .sales-panel h3 {
-            font-family: var(--font-editorial);
-            font-size: 2.4rem;
-            font-weight: 400;
-            margin-bottom: 1rem;
-            letter-spacing: -0.01em;
-        }
-
-        .sales-panel .price-tag {
-            font-size: 1.2rem;
-            font-weight: 400;
             color: var(--ink);
-            margin-bottom: 1.5rem;
-            font-family: var(--font-editorial);
-            font-style: italic;
         }
 
-        .sales-panel p {
+        .product-price {
+            font-family: var(--font-clean);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--muted-clay);
+        }
+
+        .product-description {
             font-size: 0.95rem;
             color: var(--muted-clay);
-            margin-bottom: 2.5rem;
             font-weight: 300;
-            max-width: 360px;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
         }
 
-        /* Luxury Immediate Buy Button */
-        .purchase-trigger {
+        /* Action Button */
+        .btn-action {
             display: inline-flex;
             align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            max-width: 300px;
-            padding: 1.2rem 1.5rem;
-            background: var(--ink);
+            justify-content: center;
+            background-color: var(--ink);
             color: var(--white);
             text-decoration: none;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
             font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
             transition: var(--transition-fluid);
+            width: 100%;
+            text-align: center;
         }
 
-        .purchase-trigger:hover {
-            background: var(--accent-rose);
-            padding-left: 2rem;
-            padding-right: 1rem;
-        }
-
-        /* Responsive Adaptive Adjustments */
-        @media (max-width: 992px) {
-            .editorial-hero { grid-template-columns: 1fr; }
-            .hero-visual-frame { height: 50vh; }
-            .editorial-row, .editorial-row.alternate { flex-direction: column; align-items: flex-start; gap: 2.5rem; }
-            .art-card, .sales-panel { width: 100%; }
-            .art-img-wrapper { height: 450px; }
-            .asymmetric-track { gap: 6rem; }
+        .btn-action:hover {
+            background-color: var(--accent-rose);
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. EDITORIAL STATEMENT HERO SECTION -->
+    <!-- Hero Section -->
     <header class="editorial-hero">
         <div class="hero-statement">
-            <span class="brand-tag">Bespoke Parker Florist</span>
-            <h1>Living art arranged for <em>extraordinary</em> moments.</h1>
-            <p>Moving past standard commercial bouquets. We craft expressive, organic structural designs delivered fresh across Colorado.</p>
-            
-            <a href="#collection" class="editorial-cta">
-                <span>Explore Pieces</span>
-                <div class="circle-arrow">↓</div>
-            </a>
+            <h1 class="hero-title">Bespoke <em>botanical</em> poetry for modern spaces.</h1>
+            <p class="hero-subtitle">We curate intentional floral architecture that transforms luxury residential estates, editorial sets, and high-fashion runways.</p>
         </div>
-        
-        <!-- Hero Spotlight using your first image -->
-        <div class="hero-visual-frame">
-            <img src="flower2.jpg" alt="Exquisite Floral Gallery Arrangement Focus">
+        <div class="hero-image-wrapper">
+            <img src="flower1.jpg" alt="Minimalist structural floral arrangement" class="hero-image">
         </div>
     </header>
 
-    <!-- 2. STAGGERED ASYMMETRIC E-COMMERCE SHOWCASE -->
-    <main class="showcase-container" id="collection">
-        <div class="showcase-intro">
-            <h2 id="sales-anchor">The Seasonal Release</h2>
-            <p style="color: var(--muted-clay); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Click any item to view custom delivery dates.</p>
+    <!-- Product Showcase Section -->
+    <main class="product-section">
+        <div class="section-header">
+            <h2 class="section-title">The Curated Collection</h2>
         </div>
 
-        <div class="asymmetric-track">
-            
-            <!-- PRODUCT FEATURE 1 (Using flower1.jpg) -->
-            <div class="editorial-row">
-                <div class="art-card">
-                    <div class="art-img-wrapper">
-                        <img src="flower1.jpg" alt="The Crimson Botanical Sculpture">
-                    </div>
-
-                     <!-- PRODUCT FEATURE 2 (Using flower2.jpg) -->
-            <div class="editorial-row">
-                <div class="art-card">
-                    <div class="art-img-wrapper">
-                        <img src="flower2.jpg" alt="The Blue Evolution">
-                    </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="flower2.jpg" alt="The Crimson Muse arrangement" class="product-img">
                 </div>
+                <div class="product-meta">
+                    <h3 class="product-name">Crimson Muse</h3>
+                    <span class="product-price">$245</span>
+                </div>
+                <p class="product-description">Deep velvet flora accented with structural eucalyptus branches, arranged in a custom raw-clay vessel.</p>
+                <a href="#" class="btn-action">Acquire Design</a>
+            </article>
+
+            <!-- Product 2 (Fixed to match Product 1) -->
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="flower3.jpg" alt="The Alabaster Minimalist arrangement" class="product-img">
+                </div>
+                <div class="product-meta">
+                    <h3 class="product-name">Alabaster Minimalist</h3>
+                    <span class="product-price">$195</span>
+                </div>
+                <p class="product-description">An elegant statement piece featuring pristine white orchids, dried palm spears, and bleached botanicals.</p>
+                <a href="#" class="btn-action">Acquire Design</a>
+            </article>
+
+            <!-- Product 3 (Newly Added) -->
+            <article class="product-card">
+                <div class="product-image-container">
+                    <img src="flower4.jpg" alt="The Earth & Embers arrangement" class="product-img">
+                </div>
+                <div class="product-meta">
+                    <h3 class="product-name">Earth & Embers</h3>
+                    <span class="product-price">$220</span>
+                </div>
+                <p class="product-description">Warm terracotta tones blending with wild branches, smoked pampas grass, and amber seasonal accents.</p>
+                <a href="#" class="btn-action">Acquire Design</a>
+            </article>
+        </div>
+    </main>
+
+</body>
+</html>
