@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquire | Floral Elegance Bespoke Botanical Design</title>
+    <title>Contact Us | Floral Elegance</title>
     
     <!-- Premium Editorial & Sans Fonts -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght=0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Organic, editorial tone palette */
+            /* Clean Organic Palette */
             --bg-canvas: #f7f5f0;       /* Warm linen background */
-            --ink: #111518;            /* Deep velvet black for dramatic text contrast */
-            --accent-rose: #d44d61;    /* The high-conversion "pop" color for sales actions */
-            --muted-clay: #8a817c;     /* Soft earth tone for secondary elements */
+            --ink: #111518;            /* Velvet black text contrast */
+            --accent-rose: #d44d61;    /* Accent color for hover states */
+            --muted-clay: #8a817c;     /* Soft earth tone for subtitles */
             --white: #ffffff;
             --border-light: rgba(17, 21, 24, 0.1);
             
             --font-editorial: 'Cormorant Garamond', serif;
             --font-clean: 'Inter', sans-serif;
-            --transition-fluid: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            --transition-fluid: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         * {
@@ -35,13 +35,12 @@
             background-color: var(--bg-canvas);
             color: var(--ink);
             font-family: var(--font-clean);
-            line-height: 1.7;
+            line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            padding-top: 80px; /* Space for sticky navigation header */
+            padding-top: 80px; /* Space for fixed header */
         }
 
-        /* PREMIUM NAVIGATION BAR */
+        /* NAVIGATION BAR */
         .site-navigation {
             position: fixed;
             top: 0;
@@ -89,49 +88,29 @@
             color: var(--ink);
         }
 
-        .btn-nav-call {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--ink);
-            color: var(--white);
-            text-decoration: none;
-            padding: 0.6rem 1.5rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            transition: var(--transition-fluid);
-            border-radius: 2px;
-        }
-
-        .btn-nav-call:hover {
-            background-color: var(--accent-rose);
-        }
-
-        /* ASYMMETRICAL CONTACT PAGE LAYOUT */
+        /* 2-COLUMN LAYOUT */
         .contact-container {
             display: grid;
-            grid-template-columns: 1fr 1.3fr;
+            grid-template-columns: 1fr 1.2fr;
             min-height: calc(100vh - 80px);
             max-width: 100%;
         }
 
-        /* Left Side: Context Panel */
+        /* Left Side: Store Info Panel */
         .contact-editorial-panel {
-            padding: 6rem 10% 6rem 12%;
+            padding: 5rem 10% 5rem 12%;
             background-color: var(--bg-canvas);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
         }
 
         .contact-title {
             font-family: var(--font-editorial);
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 400;
             line-height: 1.1;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .contact-title em {
@@ -139,18 +118,17 @@
         }
 
         .contact-subtitle {
-            font-size: 1.05rem;
+            font-size: 1rem;
             font-weight: 300;
             color: var(--muted-clay);
-            margin-bottom: 4rem;
-            max-width: 450px;
+            margin-bottom: 3rem;
+            max-width: 420px;
         }
 
         .contact-direct-info {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
-            margin-top: auto;
+            gap: 2.5rem;
         }
 
         .info-group h3 {
@@ -178,10 +156,10 @@
             color: var(--accent-rose);
         }
 
-        /* Right Side: Elegant Form Panel */
+        /* Right Side: Clean Form Panel */
         .contact-form-panel {
             background-color: var(--white);
-            padding: 6rem 12% 6rem 10%;
+            padding: 5rem 12% 5rem 10%;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -189,14 +167,7 @@
 
         .inquiry-form {
             width: 100%;
-            max-width: 650px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
+            max-width: 550px;
         }
 
         .form-group {
@@ -205,24 +176,20 @@
             margin-bottom: 2rem;
         }
 
-        .form-group.full-width {
-            grid-column: span 2;
-        }
-
         .form-label {
             font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             color: var(--ink);
         }
 
-        .form-input, .form-textarea, .form-select {
+        .form-input, .form-textarea {
             font-family: var(--font-clean);
             font-size: 1rem;
             font-weight: 300;
-            padding: 1rem 0;
+            padding: 0.75rem 0;
             color: var(--ink);
             background-color: transparent;
             border: none;
@@ -232,109 +199,125 @@
             width: 100%;
         }
 
-        .form-select {
-            cursor: pointer;
-            border-radius: 0;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='10' height='6' viewBox='0 0 10 6'><path d='M0 0l5 5 5-5z' fill='%23111518'/></svg>");
-            background-repeat: no-repeat;
-            background-position: right center;
-        }
-
-        .form-input:focus, .form-textarea:focus, .form-select:focus {
+        .form-input:focus, .form-textarea:focus {
             border-bottom-color: var(--ink);
         }
 
         .form-textarea {
             resize: none;
-            height: 120px;
+            height: 100px;
         }
 
-        /* Custom Styled Radio Elements for Inquiry Theme Selection */
-        .theme-selection-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .theme-option {
-            position: relative;
-        }
-
-        .theme-option input[type="radio"] {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .theme-custom-label {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid var(--border-light);
-            padding: 1rem;
-            font-size: 0.85rem;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            cursor: pointer;
-            text-align: center;
-            transition: var(--transition-fluid);
-            background-color: var(--bg-canvas);
-        }
-
-        .theme-option input[type="radio"]:checked + .theme-custom-label {
-            background-color: var(--ink);
-            color: var(--white);
-            border-color: var(--ink);
-        }
-
-        /* Action Submit Button */
+        /* Button Styling */
         .btn-submit {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             background-color: var(--ink);
             color: var(--white);
-            text-decoration: none;
-            padding: 1.25rem 3rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
             border: none;
+            padding: 1rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
             cursor: pointer;
             transition: var(--transition-fluid);
-            width: auto;
-            margin-top: 1rem;
+            width: 100%;
         }
 
         .btn-submit:hover {
             background-color: var(--accent-rose);
         }
 
-        /* RESPONSIVE BREAKPOINTS */
-        @media (max-width: 968px) {
+        /* RESPONSIVE DESIGN BREAKPOINTS */
+        @media (max-width: 992px) {
             .contact-container {
                 grid-template-columns: 1fr;
             }
             .contact-editorial-panel {
                 padding: 4rem 10%;
             }
-            .contact-form-panel {
-                padding: 4rem 10%;
+            .contact-subtitle {
+                margin-bottom: 2rem;
             }
             .contact-direct-info {
-                margin-top: 3rem;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 3rem;
+            }
+            .contact-form-panel {
+                padding: 4rem 10%;
             }
         }
 
         @media (max-width: 600px) {
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
+            .site-navigation {
+                padding: 0 5%;
             }
+            .nav-links {
+                display: none; /* Desktop menu hidden on small mobile sizes */
+            }
+            .contact-direct-info {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="site-navigation">
+        <a href="#" class="nav-logo">Floral Elegance</a>
+        <div class="nav-links">
+            <a href="#" class="nav-link-item">Home</a>
+            <a href="#" class="nav-link-item">Gallery</a>
+            <a href="contact.html" class="nav-link-item active">Contact</a>
+        </div>
+    </nav>
+
+    <!-- CONTENT WRAPPER -->
+    <div class="contact-container">
+        
+        <!-- Left Column: Business Details -->
+        <aside class="contact-editorial-panel">
+            <div>
+                <h1 class="contact-title">Visit our <em>flower shop</em>.</h1>
+                <p class="contact-subtitle">Stop by to browse fresh bouquets, or drop us a quick line below to check flower availability today.</p>
+            </div>
+            
+            <div class="contact-direct-info">
+                <div class="info-group">
+                    <h3>The Shop</h3>
+                    <p>123 Botanist Way<br>Denver, CO 80245</p>
+                </div>
+                <div class="info-group">
+                    <h3>Get in Touch</h3>
+                    <p><a href="mailto:support@floralelegance.com">support@floralelegance.com</a></p>
+                    <p><a href="tel:+11234567890">+1 (123) 456-7890</a></p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Column: Simplified Basic Form -->
+        <main class="contact-form-panel">
+            <form class="inquiry-form" action="#" method="POST">
+                
+                <div class="form-group">
+                    <label class="form-label" for="fullName">Your Name</label>
+                    <input class="form-input" type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input class="form-input" type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="subject">Subject</label>
+                    <input class="form-input" type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
