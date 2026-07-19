@@ -3,30 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Elegance | Luxury Florist Denver, CO</title>
+    <title>Floral Elegance | Bespoke Botanical Design</title>
     
-    <!-- Premium Google Fonts for Luxury & Readability -->
+    <!-- Premium Editorial & Sans Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            /* Muted backdrop tones so the vibrant floral assets stand out */
-            --bg-creme: #fdfbf7;
-            --dark-charcoal: #1a1e21;
-            --text-muted: #5a6167;
+            /* Organic, editorial tone palette */
+            --bg-canvas: #f7f5f0;       /* Warm linen background */
+            --ink: #111518;            /* Deep velvet black for dramatic text contrast */
+            --accent-rose: #d44d61;    /* The high-conversion "pop" color for sales actions */
+            --muted-clay: #8a817c;     /* Soft earth tone for secondary elements */
             --white: #ffffff;
             
-            /* High-converting pops of color */
-            --pop-coral: #e05368;       /* Vibrant rose/coral for active buttons & price tags */
-            --pop-gold: #c2a679;        /* Sophisticated accent gold */
-            
-            /* Typography */
-            --font-display: 'Marcellus', serif;
-            --font-body: 'Montserrat', sans-serif;
-            
-            --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --font-editorial: 'Cormorant Garamond', serif;
+            --font-clean: 'Inter', sans-serif;
+            --transition-fluid: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
         * {
@@ -36,286 +31,290 @@
         }
 
         body {
-            background-color: var(--bg-creme);
-            color: var(--dark-charcoal);
-            font-family: var(--font-body);
-            line-height: 1.6;
+            background-color: var(--bg-canvas);
+            color: var(--ink);
+            font-family: var(--font-clean);
+            line-height: 1.7;
             -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
-        /* 1. HIGH-CONVERTING ANNOUNCEMENT BAR */
-        .promo-bar {
-            background-color: var(--dark-charcoal);
-            color: var(--white);
-            text-align: center;
-            padding: 10px;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
-            font-weight: 500;
-        }
-        
-        .promo-bar span {
-            color: var(--pop-gold);
-            font-weight: 600;
+        /* 1. ASYMMETRICAL EDITORIAL HEADER & HERO SPLIT */
+        .editorial-hero {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            min-height: 90vh;
+            width: 100%;
+            position: relative;
         }
 
-        /* 2. NAVIGATION BAR */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 6%;
-            background: rgba(253, 251, 247, 0.95);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid rgba(194, 166, 121, 0.15);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .navbar .logo {
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            text-decoration: none;
-            color: var(--dark-charcoal);
-        }
-
-        .navbar-links {
-            display: flex;
-            list-style: none;
-            align-items: center;
-        }
-
-        .navbar-links li {
-            margin-left: 2.5rem;
-        }
-
-        .navbar-links a {
-            text-decoration: none;
-            color: var(--dark-charcoal);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .navbar-links a:hover {
-            color: var(--pop-coral);
-        }
-
-        /* 3. VISUALLY DRASTIC HERO SECTION */
-        .hero {
-            /* Bright pink peonies contrasting against deep luxury background filters */
-            background: linear-gradient(rgba(26, 30, 33, 0.3), rgba(26, 30, 33, 0.45)), 
-                        url('https://unsplash.com') no-repeat center center/cover;
-            height: 75vh;
+        /* Text Side */
+        .hero-statement {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-            padding: 0 1.5rem;
+            padding: 4rem 10% 4rem 12%;
+            background-color: var(--bg-canvas);
         }
 
-        .hero h1 {
-            font-family: var(--font-display);
-            font-size: 3.8rem;
-            font-weight: 400;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        .hero p {
-            font-size: 0.95rem;
+        .hero-statement .brand-tag {
+            font-size: 0.75rem;
             text-transform: uppercase;
-            letter-spacing: 0.25em;
-            margin-bottom: 2.5rem;
-            color: rgba(255, 255, 255, 0.9);
+            letter-spacing: 0.3em;
+            color: var(--muted-clay);
+            margin-bottom: 2rem;
+            font-weight: 600;
         }
 
-        /* Eye-catching Conversion Button */
-        .cta-btn {
-            display: inline-block;
-            padding: 1.2rem 3rem;
+        .hero-statement h1 {
+            font-family: var(--font-editorial);
+            font-size: 4.5rem;
+            font-weight: 400;
+            line-height: 1.05;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+        }
+
+        .hero-statement h1 em {
+            font-style: italic;
+            color: var(--accent-rose);
+        }
+
+        .hero-statement p {
+            font-size: 1rem;
+            color: var(--muted-clay);
+            max-width: 420px;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        /* High-Converting Floating Action Link */
+        .editorial-cta {
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
             text-decoration: none;
+            color: var(--ink);
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 0.2em;
             font-weight: 600;
+            transition: var(--transition-fluid);
+        }
+
+        .editorial-cta .circle-arrow {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 1px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            transition: var(--transition-fluid);
+        }
+
+        .editorial-cta:hover {
+            color: var(--accent-rose);
+        }
+
+        .editorial-cta:hover .circle-arrow {
+            background: var(--accent-rose);
+            border-color: var(--accent-rose);
             color: var(--white);
-            background-color: var(--pop-coral); /* Pop color instantly commands action */
-            border: 1px solid var(--pop-coral);
-            box-shadow: 0 4px 15px rgba(224, 83, 104, 0.3);
-            transition: var(--transition);
+            transform: translateX(8px);
         }
 
-        .cta-btn:hover {
-            background-color: var(--white);
-            color: var(--pop-coral);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(224, 83, 104, 0.4);
-        }
-
-        /* 4. CONVERTING PRODUCT GRID DESIGN */
-        .sales-section {
-            padding: 5rem 6%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-header h2 {
-            font-family: var(--font-display);
-            font-size: 2.4rem;
-            font-weight: 400;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--text-muted);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            border: 1px solid rgba(194, 166, 121, 0.1);
+        /* Main Image Side (Hero Visual Component) */
+        .hero-visual-frame {
             position: relative;
-            transition: var(--transition);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(26, 30, 33, 0.05);
-        }
-
-        /* Image frame optimized for vibrant floral pop */
-        .product-img-wrapper {
-            width: 100%;
-            height: 380px;
+            background-color: #e2ded5;
             overflow: hidden;
-            background-color: #eae7e2;
         }
 
-        .product-img-wrapper img {
+        .hero-visual-frame img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .product-card:hover .product-img-wrapper img {
-            transform: scale(1.06);
+        /* 2. THE ANTI-GRID EDITORIAL GALLERY (High Converting Sales Showcase) */
+        .showcase-container {
+            padding: 8rem 8% 10rem 8%;
+            max-width: 1500px;
+            margin: 0 auto;
         }
 
-        /* Subtle luxury badges to force conversion urgency */
-        .badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--dark-charcoal);
-            color: var(--white);
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.15em;
-            padding: 6px 12px;
-            font-weight: 500;
-            z-index: 10;
+        .showcase-intro {
+            margin-bottom: 6rem;
+            max-width: 600px;
         }
 
-        .product-info {
-            padding: 1.5rem;
-            text-align: center;
+        .showcase-intro h2 {
+            font-family: var(--font-editorial);
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 1rem;
         }
 
-        .product-title {
-            font-family: var(--font-display);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.02em;
+        /* Asymmetrical stagger track */
+        .asymmetric-track {
+            display: flex;
+            flex-direction: column;
+            gap: 12rem; /* Extreme spacing prevents it from looking like a standard list */
         }
 
-        .product-price {
-            font-size: 1rem;
-            color: var(--pop-coral); /* Sharp pop of color on the price point */
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-        }
-
-        /* Seamless layout inline checkout trigger button */
-        .add-to-cart-btn {
-            display: block;
+        /* Row Base Styling */
+        .editorial-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             width: 100%;
-            padding: 0.9rem;
-            background: transparent;
-            border: 1px solid var(--dark-charcoal);
-            color: var(--dark-charcoal);
-            text-transform: uppercase;
-            font-size: 0.75rem;
+        }
+
+        /* Flip alternating items to destroy template uniformity */
+        .editorial-row.alternate {
+            flex-direction: row-reverse;
+        }
+
+        /* Large Image Card Setup */
+        .art-card {
+            width: 55%;
+            position: relative;
+        }
+
+        .art-img-wrapper {
+            width: 100%;
+            height: 650px; /* Tall, premium proportions */
+            overflow: hidden;
+            background-color: #eae6dd;
+        }
+
+        .art-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-fluid);
+        }
+
+        .art-card:hover .art-img-wrapper img {
+            transform: scale(1.03);
+        }
+
+        /* Floating Overlaid Product Panel for High Conversion Context */
+        .sales-panel {
+            width: 38%;
+            padding: 2rem 0;
+        }
+
+        .editorial-row.alternate .sales-panel {
+            padding-right: 5%;
+        }
+
+        .sales-panel .item-index {
+            font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.15em;
-            cursor: pointer;
-            transition: var(--transition);
+            color: var(--accent-rose);
+            margin-bottom: 1rem;
+            display: block;
         }
 
-        .add-to-cart-btn:hover {
-            background: var(--dark-charcoal);
+        .sales-panel h3 {
+            font-family: var(--font-editorial);
+            font-size: 2.4rem;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .sales-panel .price-tag {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-editorial);
+            font-style: italic;
+        }
+
+        .sales-panel p {
+            font-size: 0.95rem;
+            color: var(--muted-clay);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            max-width: 360px;
+        }
+
+        /* Luxury Immediate Buy Button */
+        .purchase-trigger {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 300px;
+            padding: 1.2rem 1.5rem;
+            background: var(--ink);
             color: var(--white);
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            transition: var(--transition-fluid);
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            .navbar { padding: 1.2rem 5%; }
-            .navbar-links { display: none; } /* Hide raw nav links on mobile for conversion focus */
-            .hero h1 { font-size: 2.5rem; }
-            .sales-section { padding: 3rem 5%; }
+        .purchase-trigger:hover {
+            background: var(--accent-rose);
+            padding-left: 2rem;
+            padding-right: 1rem;
+        }
+
+        /* Responsive Adaptive Adjustments */
+        @media (max-width: 992px) {
+            .editorial-hero { grid-template-columns: 1fr; }
+            .hero-visual-frame { height: 50vh; }
+            .editorial-row, .editorial-row.alternate { flex-direction: column; align-items: flex-start; gap: 2.5rem; }
+            .art-card, .sales-panel { width: 100%; }
+            .art-img-wrapper { height: 450px; }
+            .asymmetric-track { gap: 6rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. ANNOUNCEMENT BAR -->
-    <div class="promo-bar">
-        Free Hand-Delivered Delivery in Denver For Orders Over $75 — <span>Use Code: DENVERLOCAL</span>
-    </div>
-
-    <!-- 2. NAVIGATION BAR -->
-    <nav class="navbar">
-        <a href="#" class="logo">Floral Elegance</a>
-        <ul class="navbar-links">
-            <li><a href="#shop">Shop Bouquets</a></li>
-            <li><a href="#weddings">Weddings</a></li>
-            <li><a href="#about">Our Story</a></li>
-            <li><a href="#cart" style="color: var(--pop-coral);">Cart (0)</a></li>
-        </ul>
-    </nav>
-
-    <!-- 3. HERO BANNER SECTION -->
-    <header class="hero">
-        <h1>Breathtaking Floral Designs</h1>
-        <p>Handcrafted locally. Delivered fresh same-day in Denver, CO.</p>
-        <a href="#shop" class="cta-btn">Shop The Collection</a>
+    <!-- 1. EDITORIAL STATEMENT HERO SECTION -->
+    <header class="editorial-hero">
+        <div class="hero-statement">
+            <span class="brand-tag">Bespoke Parker Florist</span>
+            <h1>Living art arranged for <em>extraordinary</em> moments.</h1>
+            <p>Moving past standard commercial bouquets. We craft expressive, organic structural designs delivered fresh across Colorado.</p>
+            
+            <a href="#collection" class="editorial-cta">
+                <span>Explore Pieces</span>
+                <div class="circle-arrow">↓</div>
+            </a>
+        </div>
+        
+        <!-- Hero Spotlight using your first image -->
+        <div class="hero-visual-frame">
+            <img src="flower1.jpg" alt="Exquisite Floral Gallery Arrangement Focus">
+        </div>
     </header>
 
-    <!-- 4. HIGH-CONVERTING E-COMMERCE AREA -->
-    <main class="sales-section" id="shop">
-        <div class="section-header">
-            <h2>Curated Seasonal Favorites</h2>
+    <!-- 2. STAGGERED ASYMMETRIC E-COMMERCE SHOWCASE -->
+    <main class="showcase-container" id="collection">
+        <div class="showcase-intro">
+            <h2 id="sales-anchor">The Seasonal Release</h2>
+            <p style="color: var(--muted-clay); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">Click any item to view custom delivery dates.</p>
+        </div>
+
+        <div class="asymmetric-track">
+            
+            <!-- PRODUCT FEATURE 1 (Using flower1.jpg) -->
+            <div class="editorial-row">
+                <div class="art-card">
+                    <div class="art-img-wrapper">
+                        <img src="flower1.jpg" alt="The Crimson Botanical Sculpture">
+                    </div>
+                </div>
