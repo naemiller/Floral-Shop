@@ -1,0 +1,23 @@
+- name: Deploy Update
+  # You may pin to the exact commit or the version.
+  # uses: jfrog/connect-deploy-update@767e5a4d872e13ce1685046cff37ef9f0a3e1e03
+  uses: jfrog/connect-deploy-update@v1.0.3
+  with:
+    # The project key (required)
+    project_key: 
+    # The device group names in JSON format (optional)
+    groups: # optional, default is []
+    # The filters in JSON format (optional)
+    filters: # optional, default is []
+    # The Flow UUID (required)
+    flow_uuid: 
+    # The Application Name (optional)
+    app_name: # optional, default is 
+    # The Application Version (optional)
+    app_version: # optional, default is 
+    # The deployment comment (optional)
+    comment: # optional, default is Default comment
+    # The mapping of parameters for the update configuration in JSON format (optional)
+    parameters_mapping: # optional, default is {}
+    # The authorization token (required)
+    token: 
