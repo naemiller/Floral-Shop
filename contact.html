@@ -1,1 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquire | Floral Elegance Bespoke Botanical Design</title>
+    
+    <!-- Premium Editorial & Sans Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
+    <style>
+        :root {
+            /* Organic, editorial tone palette */
+            --bg-canvas: #f7f5f0;       /* Warm linen background */
+            --ink: #111518;            /* Deep velvet black for dramatic text contrast */
+            --accent-rose: #d44d61;    /* The high-conversion "pop" color for sales actions */
+            --muted-clay: #8a817c;     /* Soft earth tone for secondary elements */
+            --white: #ffffff;
+            --border-light: rgba(17, 21, 24, 0.1);
+            
+            --font-editorial: 'Cormorant Garamond', serif;
+            --font-clean: 'Inter', sans-serif;
+            --transition-fluid: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-canvas);
+            color: var(--ink);
+            font-family: var(--font-clean);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            padding-top: 80px; /* Space for sticky navigation header */
+        }
+
+        /* PREMIUM NAVIGATION BAR */
+        .site-navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: rgba(247, 245, 240, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(17, 21, 24, 0.05);
+        }
+
+        .nav-logo {
+            font-family: var(--font-editorial);
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link-item {
+            text-decoration: none;
+            color: var(--muted-clay);
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: var(--transition-fluid);
+        }
+
+        .nav-link-item:hover, .nav-link-item.active {
+            color: var(--ink);
+        }
+
+        .btn-nav-call {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--ink);
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            transition: var(--transition-fluid);
+            border-radius: 2px;
+        }
+
+        .btn-nav-call:hover {
+            background-color: var(--accent-rose);
+        }
+
+        /* ASYMMETRICAL CONTACT PAGE LAYOUT */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            min-height: calc(100vh - 80px);
+            max-width: 100%;
+        }
+
+        /* Left Side: Context Panel */
+        .contact-editorial-panel {
+            padding: 6rem 10% 6rem 12%;
+            background-color: var(--bg-canvas);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .contact-title {
+            font-family: var(--font-editorial);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 400;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .contact-title em {
+            font-style: italic;
+        }
+
+        .contact-subtitle {
+            font-size: 1.05rem;
+            font-weight: 300;
+            color: var(--muted-clay);
+            margin-bottom: 4rem;
+            max-width: 450px;
+        }
+
+        .contact-direct-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin-top: auto;
+        }
+
+        .info-group h3 {
+            font-family: var(--font-editorial);
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+        }
+
+        .info-group p {
+            font-size: 0.95rem;
+            color: var(--muted-clay);
+            font-weight: 300;
+        }
+
+        .info-group a {
+            color: var(--ink);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition-fluid);
+        }
+
+        .info-group a:hover {
+            color: var(--accent-rose);
+        }
+
+        /* Right Side: Elegant Form Panel */
+        .contact-form-panel {
+            background-color: var(--white);
+            padding: 6rem 12% 6rem 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .inquiry-form {
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.75rem;
+            color: var(--ink);
+        }
+
+        .form-input, .form-textarea, .form-select {
+            font-family: var(--font-clean);
+            font-size: 1rem;
+            font-weight: 300;
+            padding: 1rem 0;
+            color: var(--ink);
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-light);
+            outline: none;
+            transition: var(--transition-fluid);
+            width: 100%;
+        }
+
+        .form-select {
+            cursor: pointer;
+            border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='10' height='6' viewBox='0 0 10 6'><path d='M0 0l5 5 5-5z' fill='%23111518'/></svg>");
+            background-repeat: no-repeat;
+            background-position: right center;
+        }
+
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            border-bottom-color: var(--ink);
+        }
+
+        .form-textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        /* Custom Styled Radio Elements for Inquiry Theme Selection */
+        .theme-selection-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .theme-option {
+            position: relative;
+        }
+
+        .theme-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .theme-custom-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-light);
+            padding: 1rem;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+            text-align: center;
+            transition: var(--transition-fluid);
+            background-color: var(--bg-canvas);
+        }
+
+        .theme-option input[type="radio"]:checked + .theme-custom-label {
+            background-color: var(--ink);
+            color: var(--white);
+            border-color: var(--ink);
+        }
+
+        /* Action Submit Button */
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--ink);
+            color: var(--white);
+            text-decoration: none;
+            padding: 1.25rem 3rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-fluid);
+            width: auto;
+            margin-top: 1rem;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--accent-rose);
+        }
+
+        /* RESPONSIVE BREAKPOINTS */
+        @media (max-width: 968px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .contact-editorial-panel {
+                padding: 4rem 10%;
+            }
+            .contact-form-panel {
+                padding: 4rem 10%;
+            }
+            .contact-direct-info {
+                margin-top: 3rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
