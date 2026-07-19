@@ -3,280 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Floral Elegance | Parker, CO Flower Shop</title>
+    <title>Floral Elegance | Luxury Florist Denver, CO</title>
+    
+    <!-- Premium Google Fonts for Luxury & Readability -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Marcellus&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #c94a5c;
-            --primary-dark: #a23545;
-            --light-pink: #fdf0f2;
-            --dark: #2c3e50;
-            --text: #555555;
+            /* Muted backdrop tones so the vibrant floral assets stand out */
+            --bg-creme: #fdfbf7;
+            --dark-charcoal: #1a1e21;
+            --text-muted: #5a6167;
             --white: #ffffff;
+            
+            /* High-converting pops of color */
+            --pop-coral: #e05368;       /* Vibrant rose/coral for active buttons & price tags */
+            --pop-gold: #c2a679;        /* Sophisticated accent gold */
+            
+            /* Typography */
+            --font-display: 'Marcellus', serif;
+            --font-body: 'Montserrat', sans-serif;
+            
+            --transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            color: var(--text);
+            background-color: var(--bg-creme);
+            color: var(--dark-charcoal);
+            font-family: var(--font-body);
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navbar */
+        /* 1. HIGH-CONVERTING ANNOUNCEMENT BAR */
+        .promo-bar {
+            background-color: var(--dark-charcoal);
+            color: var(--white);
+            text-align: center;
+            padding: 10px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+        }
+        
+        .promo-bar span {
+            color: var(--pop-gold);
+            font-weight: 600;
+        }
+
+        /* 2. NAVIGATION BAR */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 5%;
-            background: var(--white);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            padding: 1.5rem 6%;
+            background: rgba(253, 251, 247, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(194, 166, 121, 0.15);
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .navbar .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--dark-charcoal);
         }
 
         .navbar-links {
             display: flex;
             list-style: none;
+            align-items: center;
         }
 
         .navbar-links li {
-            margin-left: 2rem;
+            margin-left: 2.5rem;
         }
 
         .navbar-links a {
             text-decoration: none;
-            color: var(--dark);
+            color: var(--dark-charcoal);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: var(--transition);
         }
 
         .navbar-links a:hover {
-            color: var(--primary);
+            color: var(--pop-coral);
         }
 
-        /* Hero Section */
+        /* 3. VISUALLY DRASTIC HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://unsplash.com') no-repeat center center/cover;
-            height: 70vh;
+            /* Bright pink peonies contrasting against deep luxury background filters */
+            background: linear-gradient(rgba(26, 30, 33, 0.3), rgba(26, 30, 33, 0.45)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: var(--white);
-            padding: 0 1rem;
+            padding: 0 1.5rem;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-family: var(--font-display);
+            font-size: 3.8rem;
+            font-weight: 400;
+            line-height: 1.2;
             margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            margin-bottom: 2.5rem;
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        .btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 0.8rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s ease;
+        /* Eye-catching Conversion Button */
+        .cta-btn {
+            display: inline-block;
+            padding: 1.2rem 3rem;
             text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-weight: 600;
+            color: var(--white);
+            background-color: var(--pop-coral); /* Pop color instantly commands action */
+            border: 1px solid var(--pop-coral);
+            box-shadow: 0 4px 15px rgba(224, 83, 104, 0.3);
+            transition: var(--transition);
         }
 
-        .btn:hover {
-            background: var(--primary-dark);
+        .cta-btn:hover {
+            background-color: var(--white);
+            color: var(--pop-coral);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(224, 83, 104, 0.4);
         }
 
-        /* Featured Products */
-        .products {
-            padding: 5% 5%;
-            background: var(--light-pink);
+        /* 4. CONVERTING PRODUCT GRID DESIGN */
+        .sales-section {
+            padding: 5rem 6%;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
-        .products h2 {
+        .section-header {
             text-align: center;
-            color: var(--dark);
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-display);
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-muted);
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
-        .card {
+        .product-card {
             background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
+            border: 1px solid rgba(194, 166, 121, 0.1);
+            position: relative;
+            transition: var(--transition);
         }
 
-        .card:hover {
-            transform: translateY(-10px);
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(26, 30, 33, 0.05);
         }
 
-        .card img {
+        /* Image frame optimized for vibrant floral pop */
+        .product-img-wrapper {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
+            height: 380px;
+            overflow: hidden;
+            background-color: #eae7e2;
         }
 
-        .card-content {
+        .product-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.06);
+        }
+
+        /* Subtle luxury badges to force conversion urgency */
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--dark-charcoal);
+            color: var(--white);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            padding: 6px 12px;
+            font-weight: 500;
+            z-index: 10;
+        }
+
+        .product-info {
             padding: 1.5rem;
             text-align: center;
         }
 
-        .card-content h3 {
-            color: var(--dark);
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
             margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
         }
 
-        .card-content .price {
-            color: var(--primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 5% 5%;
-            background: var(--white);
-        }
-
-        .contact h2 {
-            text-align: center;
-            color: var(--dark);
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .product-price {
             font-size: 1rem;
+            color: var(--pop-coral); /* Sharp pop of color on the price point */
+            font-weight: 600;
+            margin-bottom: 1.2rem;
         }
 
-        .contact-form textarea {
-            height: 150px;
-            resize: vertical;
+        /* Seamless layout inline checkout trigger button */
+        .add-to-cart-btn {
+            display: block;
+            width: 100%;
+            padding: 0.9rem;
+            background: transparent;
+            border: 1px solid var(--dark-charcoal);
+            color: var(--dark-charcoal);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        /* Footer */
-        footer {
-            background: var(--dark);
+        .add-to-cart-btn:hover {
+            background: var(--dark-charcoal);
             color: var(--white);
-            text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .navbar { padding: 1.2rem 5%; }
+            .navbar-links { display: none; } /* Hide raw nav links on mobile for conversion focus */
+            .hero h1 { font-size: 2.5rem; }
+            .sales-section { padding: 3rem 5%; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- 1. ANNOUNCEMENT BAR -->
+    <div class="promo-bar">
+        Free Hand-Delivered Delivery in Denver For Orders Over $75 — <span>Use Code: DENVERLOCAL</span>
+    </div>
+
+    <!-- 2. NAVIGATION BAR -->
     <nav class="navbar">
-        <div class="logo">🌸 Floral Elegance</div>
+        <a href="#" class="logo">Floral Elegance</a>
         <ul class="navbar-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#shop">Shop</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#shop">Shop Bouquets</a></li>
+            <li><a href="#weddings">Weddings</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#cart" style="color: var(--pop-coral);">Cart (0)</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <h1>Fresh Blooms for Every Occasion</h1>
-        <p>Hand-crafted bouquets and floral arrangements designed to brighten someone's day. Proudly serving the Parker, Colorado area.</p>
-        <a href="#shop" class="btn">Shop Now</a>
-    </section>
+    <!-- 3. HERO BANNER SECTION -->
+    <header class="hero">
+        <h1>Breathtaking Floral Designs</h1>
+        <p>Handcrafted locally. Delivered fresh same-day in Denver, CO.</p>
+        <a href="#shop" class="cta-btn">Shop The Collection</a>
+    </header>
 
-    <!-- Featured Products -->
-    <section id="shop" class="products">
-        <h2>Featured Arrangements</h2>
-        <div class="product-grid">
-            
-            <!-- Product 1 -->
-            <div class="card">
-                <img src="https://unsplash.com" alt="Spring Roses">
-                <div class="card-content">
-                    <h3>Blushing Spring</h3>
-                    <span class="price">$55.00</span>
-                    <a href="flower1.jpg" class="btn">Add to Cart</a>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="card">
-                <img src="https://unsplash.com" alt="Sunflower Bouquet">
-                <div class="card-content">
-                    <h3>Sunny Smiles</h3>
-                    <span class="price">$45.00</span>
-                    <a href="flower2.jpg" class="btn">Add to Cart</a>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="card">
-                <img src="https://unsplash.com" alt="Elegant Lilies">
-                <div class="card-content">
-                    <h3>Royal Elegance</h3>
-                    <span class="price">$65.00</span>
-                    <a href="flower3.jpg" class="btn">Add to Cart</a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <form class="contact-form" action="#" method="POST">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Tell us about your floral needs (e.g., weddings, events, deliveries)..." required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Floral Elegance. Proudly serving Parker, CO. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <!-- 4. HIGH-CONVERTING E-COMMERCE AREA -->
+    <main class="sales-section" id="shop">
+        <div class="section-header">
+            <h2>Curated Seasonal Favorites</h2>
